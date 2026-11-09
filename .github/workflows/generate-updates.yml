@@ -2,13 +2,14 @@ name: Generate-Updates
 
 permissions:
   contents: read
-on:
-  workflow_dispatch:
-    inputs:
-      args:
-        description: "Extra command line arguments."
-        required: false
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       args:
+#         description: "Extra command line arguments."
+#         required: false
+# 
 jobs:
   generate-updates:
     if: ${{ github.repository == 'googleapis/google-api-ruby-client' }}

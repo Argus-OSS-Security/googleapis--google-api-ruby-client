@@ -2,10 +2,11 @@ name: Weekly-Generate-Updates
 
 permissions:
   contents: read
-on:
-  schedule:
-    - cron: '02 9 * * 0'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   schedule:
+#     - cron: '02 9 * * 0'
+# 
 jobs:
   generate-updates:
     if: ${{ github.repository == 'googleapis/google-api-ruby-client' }}
